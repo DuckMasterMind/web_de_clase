@@ -1,0 +1,96 @@
+<?php
+// confirmar sesion
+
+$servername2 = "localhost";
+$username2 = "admin";
+$password2 = "novaadmin";
+$dbname2 = "mysql";
+
+session_start();
+
+// Create connection
+$conn = new mysqli($servername2, 
+    $username2, $password2, $dbname2);
+ 
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: "
+        . $conn->connect_error);
+}
+
+if (!isset($_SESSION['loggedin'])) {
+    
+    header('Location: index.html');
+    exit;
+}
+
+$id = $_SESSION['id'];
+$name = $_SESSION['name'];
+
+if ($stmt = $conn->prepare('SELECT name, pais FROM Usuarios WHERE id = ?')) {
+
+    // parámetros de enlace de la cadena s
+    $stmt->bind_param('s', $_SESSION['id']);
+    $stmt->execute();
+
+}else {
+    echo "Failed getting user info";
+}
+
+$stmt->store_result();
+if ($stmt->num_rows > 0) {
+$stmt->bind_result($name, $pais);
+$stmt->fetch();
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en" translate="yes">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="/img/stean_logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Juegos Infinitos</title> 
+    <link rel="stylesheet" href="css\main_cat.css">
+    
+</head>
+<body>
+    <header>
+
+        <div class="header_btns">
+            <p>Stean &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ver &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Amigos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Juegos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ayuda  </p>
+        </div>
+        <div class="header_blank">
+
+        </div>
+        <div class="header_btns">
+
+        </div>
+    </header>
+    <nav>
+        <div class="blank_nav"></div>
+        
+        <div class="logo_nav"></div>
+
+        <div class="btn_nav">
+            <p class="nav_btn">TIENDA&nbsp;&nbsp; BIBLIOTECA&nbsp;&nbsp; COMUNIDAD&nbsp;&nbsp; <?php echo strtoupper("$name"); ?></p>
+        </div>
+
+        <div class="blank_nav"></div>
+    </nav>
+        <main>
+           <div class="game">
+
+           </div>
+
+        
+        </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

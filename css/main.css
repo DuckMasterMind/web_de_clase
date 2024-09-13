@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration-line: none;
+}
+body {
+    overflow-x: hidden;
+}
+header {
+    height: 5vh;
+    width: 100vw;
+    background-color: rgb(25, 24, 27);
+    display: flex;
+    flex-direction: row;
+}
+.header_btns {
+    flex: 1;
+    color: rgb(181, 181, 181);
+}
+.header_btns p {
+   margin: 10px;
+   font-size: 10pt;
+}
+.header_blank {
+    flex: 2;
+}
+
+
+
+
+
+nav {
+    height: 15vh;
+    width: 100vw;
+    background-color: rgb(25, 24, 27);
+    display: flex;
+    flex-direction: row;
+}
+nav h1 {
+    width: 92vw;
+    height: 7vh;
+    padding: 4vh;
+    font-size: 40pt;
+    color: rgb(228, 228, 228);
+} 
+
+.blank_nav {
+    flex: 2;
+}
+.btn_nav {
+    flex: 5;
+}
+.logo_nav {
+    flex: 1;
+    background-image: url(/img/stean_logo-removebg-preview.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: invert(90%);
+    background-position: center;
+}
+.nav_btn {
+    color: rgb(228, 228, 228);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: left;
+    margin-top: 3vw;
+    margin-left: 4vw;
+}
+.install_btn {
+    padding: 5px;
+    background-color: rgb(8, 135, 8);
+    height: 2.5vh;
+    color: white;
+    margin: 6px;
+    font-size: 10pt;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.advertisment_background {
+    height: 60vh;
+    width: 100vw;
+    background-image: url(https://i.pinimg.com/originals/15/e7/e3/15e7e300166c962d3b8a22f60b5cac9e.gif);
+    background-position: center;
+    background-size: cover;
+}
+.advertisment_background h1 {
+    height: 40vh;
+    width: 80vw;
+    color: rgb(228, 228, 228);
+    font-size: 60pt;
+    padding: 10vh;
+    text-shadow:
+    -4px -4px 0 #000,
+    4px -4px 0 #000,
+    -4px 4px 0 #000,
+    4px 4px 0 #000;  
+}
+
+
+
+main {
+    background-color: #202c3c;
+    width: 100vw;
+    height: 150vh;
+    
+    display: flex;
+    flex-direction: row;
+}
+.small_aside {
+    flex: 2;
+}
+.middle {
+    flex: 8;
+}
+.middle_cat_title {
+    width: 100%;
+    height: 5vh;
+    margin-top: 3vh;
+    color: rgb(228, 228, 228);
+    font-size: 15pt;
+    font-weight: 200;
+    padding-left: 4vw;
+}
+
+.game_slider {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5vh;
+    
+}
+
+
+.aside_btn {
+    flex: 1;
+    padding-top: 16vh;
+}
+.aside_btn button {
+    width: 100%;
+    height: 15vh;
+    background-color: rgba(0, 0, 0, 0.203);
+    border: none;
+    color: rgb(228, 228, 228);
+    font-size: 60pt;
+}
+.game_images {
+    flex: 20;
+    background-color: rgb(5, 5, 28);
+    display: flex;
+    flex-direction: row;
+    box-shadow: 1px -1px 12px 4px rgba(0, 0, 0, 0.32);
+    box-shadow: 1px 30px 40px 50px #30466353; 
+}
+.game_ads {
+    flex: 20;
+    /* background-color: rgb(5, 5, 28); */
+    box-shadow: 1px -1px 12px 4px rgba(0, 0, 0, 0.32); 
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+}
+
+.game_ads .long_ad {
+    /* background-color: rgb(52, 124, 155); */
+    background-image: url(/img/ad_background.jpg);
+    grid-area: 1 / 1 / 3 / 2;
+}
+.long_ad_thumnail {
+    width: 100%;
+    height: 70%;
+    background-position: center;
+    background-size: cover;
+}
+.long_ad_title {
+   width: 100%;
+   height: 30%;
+   overflow: hidden;
+   color: rgb(228, 228, 228);
+   
+}
+.long_ad_title p {
+    width: 0px;
+    padding: 15px;
+    z-index: -9999;
+ }
+
+
+
+
+.game_ads .long_ad2 {
+    background-image: url(/img/ad_background.jpg);
+    grid-area: 1 / 2 / 3 / 2;
+}
+.game_ads .small_ad1 {
+    background-color: beige;
+    grid-area: 1 / 3 / 2 / 4;
+    background-size: cover;
+    background-position: center;
+}
+.game_ads .small_ad2 {
+    background-color: rgb(156, 156, 81);
+    grid-area: 2 / 3 / 3 / 4;
+    background-size: cover;
+    background-position: center;
+}
+.game_ads .small_ad1 a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.game_ads .small_ad2 a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.game_images .game_thumbnail {
+    flex: 2;
+    background-size: cover;
+    background-position: center;
+}
+.game_images .game_section {
+    flex: 1;
+    overflow: hidden;
+}
+
+
+.game_images .game_thumbnail a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.game_images .game_section a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: rgb(228, 228, 228);
+}
+.game_images .game_section a h2 {
+    margin: 2vw;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+.game_images .game_section a p {
+    margin: 2vw;
+}
+.game_images .game_section a img {
+    margin-left: 2vw;
+    width: 16vw;
+    height: 10vw;
+}
+
+.category_slider {
+    width: 100%;
+    height: 10vw;
+    display: flex;
+    flex-direction: row;
+}
+.category_slider .cat_btn {
+    background-color: antiquewhite;
+    margin: 1vw;
+    flex: 1;
+    text-align: center;
+}
+.category_slider .cat_btn a {
+    color: white;
+    display: block;
+    font-weight: 700;
+    font-size: 17pt;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    padding-top: 3vw;
+}
+
+
+
+
+
+
+
+
+
