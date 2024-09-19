@@ -67,9 +67,10 @@ input::placeholder {
     height: 50px;
     margin-top: 2vw;
     background: rgb(0,241,255);
-    background: linear-gradient(90deg, rgba(0,241,255,1) 0%, rgba(0,57,255,1) 100%, rgba(58,105,203,1) 100%);
+    background: linear-gradient(90deg, rgb(0, 217, 255) 0%, rgba(0,57,255,1) 100%, rgba(58,105,203,1) 100%);
     border-radius: 2px;
     font-size: 15pt;
+    color: white;
 }
 form p {
     margin-left: 3vw;
